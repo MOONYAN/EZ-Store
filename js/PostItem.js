@@ -7,7 +7,7 @@ $('#_pushButton').click(function ()
         {
             Name: $('#_nametext').val(),
             ImageURL: $('#_imageUrlText').val(),
-            UnitPrice: $('#_unitPriceText').val(),
+            UnitPrice: parseInt($('#_unitPriceText').val()),
         };
     database.ref('product').push(newItem);
     location.reload();
