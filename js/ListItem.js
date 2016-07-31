@@ -1,7 +1,7 @@
 ﻿var database = firebase.database();
 var $itemContainer = $('#_itemContainer');
 /*
-firebase.database().ref('item').once('value').then(function (snapshot) {
+firebase.database().ref('product').once('value').then(function (snapshot) {
 
     snapshot.forEach(function (childSnapshot) {
         var data = childSnapshot.val();
@@ -24,7 +24,7 @@ firebase.database().ref('item').once('value').then(function (snapshot) {
 });
 */
 
-firebase.database().ref('item').on('child_added',function (snapshot) {
+firebase.database().ref('product').on('child_added', function (snapshot) {
         var data = snapshot.val();
         var $item = $('<div class="col-xs-12 col-sm-4 list-group"></div>');
         console.log(snapshot.key);

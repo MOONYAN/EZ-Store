@@ -9,6 +9,6 @@ $('#_pushButton').click(function ()
             ImageURL: $('#_imageUrlText').val(),
             UnitPrice: $('#_unitPriceText').val(),
         };
-    database.ref('item').push(newItem);
+    database.ref('product').push(newItem);
     location.reload();
 });
